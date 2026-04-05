@@ -1,37 +1,26 @@
-# Commit Summary: <change-name>
+**Commit N: <title>** 已完成。
 
-## Background
+<问题描述或功能说明，1-3 句话，不超过 100 字>
 
-<Why this change exists>
+| 文件 | 变更说明 |
+|------|----------|
+| [<file-name>](<workspace-relative-path>) | <不超过 20 字> |
 
-## File Summary
+**关键设计点**：
+- <要点 1>
+- <要点 2>
 
-| File | Summary |
-|------|---------|
-| `<path>` | <short summary> |
+**验证结果**：编译通过 ✅ | 测试通过 ✅ | Lint 清洁 ✅ | 编码规范审计 ✅
 
-## Key Design Points
-
-- <point>
-
-## Validation
-
-- build: <pass/fail/not-run>
-- lint: <pass/fail/not-run>
-- test: <pass/fail/not-run>
-- audit: <pass/fail/not-run>
-
-## Test Review
-
-- cases: <N>
-- fixed issues: <N>
-- optional follow-ups: <N>
-
-## Suggested Commit Message
-
+**提交信息**：
 ```text
 feat(scope): <title>
 
-- <point 1>
-- <point 2>
+- <变更点 1>
+- <变更点 2>
+- <变更点 3>
 ```
+
+**测试评审**：<N> 条用例 | 需修复 <N> 项 | 已修复 <N> 项 | 可选优化 <N> 项
+- <Critical 问题简述，如有>
+- <已修复项简述，如有>

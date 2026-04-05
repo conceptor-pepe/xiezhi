@@ -1,12 +1,13 @@
 # specledger:commit-summary
 
-Generate the delivery summary for the current change.
+Generate the delivery summary for the current change using the repository commit-summary format.
 
 Update `commit-summary.md` with:
 
-- background
-- file-level summary
+- title line in `**Commit N: <title>** 已完成。`
+- 1-3 sentence background
+- markdown file table with workspace-relative links
 - key design points
-- validation results
-- test review summary
-- suggested commit message
+- validation result line
+- commit message block
+- test review summary in the required one-line format

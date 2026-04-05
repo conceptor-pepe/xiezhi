@@ -1,12 +1,13 @@
 # SpecLedger Commit Summary
 
-Generate the delivery summary for the current change and write it into `commit-summary.md`.
+Generate the delivery summary for the current change and write it into `commit-summary.md` using the repository's required commit-summary structure.
 
 Required sections:
 
-- background
-- file summary
-- design points
-- validation results
-- test review
-- suggested commit message
+- title line in `**Commit N: <title>** 已完成。`
+- 1-3 sentence background
+- markdown file table with workspace-relative links
+- key design points
+- validation result line
+- commit message block
+- test review summary in the required one-line format
