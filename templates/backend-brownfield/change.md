@@ -1,27 +1,29 @@
 # Change: <change-name>
 
-## Background
+## 背景
 
-<What problem does this change solve and why now?>
+<说明本次变更解决什么问题，为什么现在要做>
 
-## Scope
+## 范围
 
-- <scope item>
+- <范围 1>
+- <范围 2>
 
-## Non-Goals
+## 非目标
 
-- <non-goal>
+- <明确这次不做什么>
 
-## Impact
+## 影响面
 
-- Modules: <module>
-- APIs: <api or N/A>
-- Data: <table/model or N/A>
+- 模块：<module>
+- 接口：<api or N/A>
+- 数据：<table/model or N/A>
 
-## Risks
+## 风险
 
-- <risk>
+- <风险 1>
+- <风险 2>
 
-## Rollback
+## 回滚思路
 
-<How to stop or revert the change safely>
+<如变更失败，如何回滚或止损>

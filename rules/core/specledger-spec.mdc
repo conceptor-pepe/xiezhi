@@ -25,6 +25,13 @@ alwaysApply: true
 - `commit-summary.md`
 - `archive.md`
 
+## Format Discipline
+
+- artifact templates should follow the repository's established workflow formats
+- `design.md` should prefer the phase 0.5 `Step 1 -> Step 4` structure
+- `commit-summary.md` should follow the repository commit summary rule format
+- `test-review.md` should follow the repository test review structure instead of a generic summary
+
 ## Required Command Semantics
 
 - `specledger:new-change`

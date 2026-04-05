@@ -23,3 +23,7 @@ The validation step that checks code, docs, contracts, testing, and audit artifa
 ## Archive
 
 The step where a completed change is folded back into long-term specs and recorded as completed work.
+
+## Format Source
+
+The canonical format for each artifact should come from the repository's real workflow rules and established design documents, not from generic template wording.

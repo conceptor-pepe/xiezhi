@@ -1,27 +1,28 @@
 # Change: 2026-04-04-add-team-join-audit
 
-## Background
+## 背景
 
-Add an explicit audit trail when a user joins a team.
+为团队加入流程补齐显式审计记录，方便后台追踪谁在什么时间完成了加入操作。
 
-## Scope
+## 范围
 
-- add join audit record behavior
+- 增加团队加入成功后的审计写入
+- 补齐对应 change 生命周期文档
 
-## Non-Goals
+## 非目标
 
-- no billing changes
+- 不修改计费逻辑
 
-## Impact
+## 影响面
 
-- Modules: team
-- APIs: N/A
-- Data: team audit record
+- 模块：team
+- 接口：N/A
+- 数据：team join audit record
 
-## Risks
+## 风险
 
-- event duplication
+- 重试时可能产生重复事件
 
-## Rollback
+## 回滚思路
 
-Disable the write path and revert the audit record consumer if needed.
+必要时关闭审计写入路径，并回退对应的审计消费逻辑。
