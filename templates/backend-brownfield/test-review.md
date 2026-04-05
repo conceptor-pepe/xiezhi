@@ -1,18 +1,28 @@
 # Test Review: <change-name>
 
-## Test Cases
+## Test Case Design
 
 | Case ID | Scenario | Preconditions | Steps | Expected Result |
 |--------|----------|---------------|-------|-----------------|
 | TC-001 | <scenario> | <preconditions> | <steps> | <expected> |
 
-## Review Summary
+## Review Results By Case
 
-- total cases: <N>
-- issues found: <N>
-- fixed: <N>
-- optional follow-ups: <N>
+- `<command or validation note>`
+- `<command or validation note>`
 
-## Conclusion
+## Must Fix (Critical)
+
+- <critical issue, or state none>
+
+## Fixed
+
+- <already fixed item>
+
+## Optional Improvements
+
+- <optional follow-up>
+
+## Test Conclusion
 
 - <conclusion>

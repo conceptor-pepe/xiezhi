@@ -1,37 +1,98 @@
-# Design: 2026-04-04-add-team-join-audit
+# 2026-04-04-add-team-join-audit - Full Design (Phase 0.5: Step 1-4)
 
-## Overview
+> This file is the phase 0.5 design source of truth for the current change.
 
-Add a team join audit write path after successful invitation acceptance.
+---
 
-## Data Structures
+## Step 1: Data Structure Design
 
-- tables/models: team join audit record
-- DTOs: none
-- data flow: invitation accepted -> membership created -> audit event written
+### 1.1 Database Tables (new or changed)
 
-## API Contract
+#### Table `team_join_audit`
 
-- routes: none
-- request: none
-- response: none
-- errors: audit write failure should be visible to operators
+| Column | Type | Constraint | Description |
+|--------|------|------------|-------------|
+| `id` | bigint | PK | audit record id |
+| `team_id` | bigint | NOT NULL | team id |
+| `user_id` | bigint | NOT NULL | joined user id |
+| `event_key` | varchar(64) | UNIQUE | idempotent join event key |
+| `created_at` | datetime | NOT NULL | audit timestamp |
 
-## Module Coupling
+### 1.2 Model Layer
 
-- call chain: team invitation service -> team membership flow -> audit writer
-- cross-module dependencies: none
-- reuse points: existing team membership success event
+- add a team join audit record model
 
-## Transactions And Constraints
+### 1.3 DTO Layer
+
+- none in the first version
+
+### 1.4 Key Data Flow
+
+```text
+invitation accepted
+  -> membership created
+  -> audit event written
+```
+
+---
+
+## Step 2: API Contract Definition
+
+### 2.1 API List
+
+No new API in the first version.
+
+### 2.2 Constraints
+
+- audit write failures must be visible to operators
+- no user-facing API contract changes
+
+---
+
+## Step 3: Module Coupling Analysis
+
+### 3.1 Dependency Graph
+
+```text
+team invitation service
+  -> membership flow
+  -> audit writer
+```
+
+### 3.2 Coupling Analysis
+
+| Shared Resource | Coupling Type | Direction | Risk | Mitigation |
+|-----------------|---------------|-----------|------|------------|
+| join success event | direct call | membership -> audit | duplicate writes on retry | stable event key |
+
+### 3.3 Shared Ownership
+
+- owner: membership flow
+- consumer: audit writer
+
+### 3.4 Transaction And Constraints
 
 - transaction boundary: membership success and audit creation should remain consistent
 - lock order: unchanged
 - idempotency: avoid duplicate join audit events
-- invariants: successful team join must produce one audit record
+- consistency requirement: successful team join must produce one audit record
 
-## Compatibility
+---
 
-- backward compatibility: no API contract change
-- migration: none
-- rollout or switch: direct rollout
+## Step 4: Task Split
+
+### 4.1 Execution Order
+
+| # | Task | Dependency | Files | Complexity |
+|---|------|------------|-------|------------|
+| 1 | add audit model and write path | none | `team join flow` | medium |
+| 2 | document the change lifecycle | 1 | `docs/changes/...` | low |
+
+### 4.2 Acceptance Criteria
+
+- successful team joins create one audit record
+- retries do not create duplicate audit records
+
+### 4.3 Risk Points
+
+- duplicate writes if retries do not reuse the same event key

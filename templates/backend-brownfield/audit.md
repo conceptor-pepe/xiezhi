@@ -1,22 +1,27 @@
 # Audit: <change-name>
 
-## Go Audit
+## Compile And Test
 
-- status: <pass/fail/not-run>
+- `<command>`
+- `<command>`
+
+Result:
+
+- `<package or area>`: <pass/fail/not-run>
+- `<package or area>`: <pass/fail/not-run>
+
+## Additional Verification
+
+- `<targeted test or check>`
+  - result: <pass/fail/not-run>
+  - blocker: <if any>
+
+## go-audit
+
 - command: `python3 <audit-script> <files>`
-- result: <summary>
+- result: <pass/fail/not-run>
 
-## Build / Lint / Test
+## Current Conclusion
 
-- build: <pass/fail/not-run>
-- lint: <pass/fail/not-run>
-- test: <pass/fail/not-run>
-
-## Additional Checks
-
-- docs sync: <pass/fail/not-run>
-- module review: <pass/fail/not-run>
-
-## Notes
-
-- <notes>
+- `<summary conclusion>`
+- `<remaining blocker>`

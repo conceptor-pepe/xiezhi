@@ -47,12 +47,106 @@ task_gate_ok() {
 extract_status() {
   local file="$1"
   local key="$2"
-  awk -F': ' -v wanted="$key" '
+  local result
+  result="$(
+    awk -F': ' -v wanted="$key" '
     $0 ~ "^- " wanted ":" {
       print $2
       exit
     }
   ' "$file"
+  )"
+  if [[ -z "$result" ]]; then
+    return 1
+  fi
+  printf '%s\n' "$result"
+}
+
+extract_commit_validation_status() {
+  local file="$1"
+  local key="$2"
+  local line
+
+  line="$(grep -m 1 '^\*\*验证结果\*\*：' "$file" || true)"
+  if [[ -z "$line" ]]; then
+    return 1
+  fi
+
+  case "$key" in
+    build)
+      [[ "$line" == *"编译通过 ✅"* ]] && printf 'pass\n' && return 0
+      [[ "$line" == *"编译通过 ❌"* ]] && printf 'fail\n' && return 0
+      ;;
+    lint)
+      [[ "$line" == *"Lint 清洁 ✅"* ]] && printf 'pass\n' && return 0
+      [[ "$line" == *"Lint 清洁 ❌"* ]] && printf 'fail\n' && return 0
+      ;;
+    test)
+      [[ "$line" == *"测试通过 ✅"* ]] && printf 'pass\n' && return 0
+      [[ "$line" == *"测试通过 ❌"* ]] && printf 'fail\n' && return 0
+      ;;
+    audit)
+      [[ "$line" == *"编码规范审计 ✅"* ]] && printf 'pass\n' && return 0
+      [[ "$line" == *"编码规范审计 ❌"* ]] && printf 'fail\n' && return 0
+      ;;
+  esac
+
+  return 1
+}
+
+extract_audit_status() {
+  local file="$1"
+  local key="$2"
+  local legacy
+
+  legacy="$(extract_status "$file" "$key" || true)"
+  if [[ -n "$legacy" ]]; then
+    printf '%s\n' "$legacy"
+    return 0
+  fi
+
+  case "$key" in
+    status)
+      if rg -n '^## go-audit$' "$file" >/dev/null 2>&1; then
+        if rg -n 'result: pass|结果：通过|结果：未通过|result: fail' "$file" >/dev/null 2>&1; then
+          if rg -n 'result: pass|结果：通过' "$file" >/dev/null 2>&1; then
+            printf 'pass\n'
+          else
+            printf 'fail\n'
+          fi
+          return 0
+        fi
+      fi
+      ;;
+    build)
+      if rg -n '编译通过|build: pass' "$file" >/dev/null 2>&1; then
+        printf 'pass\n'
+        return 0
+      fi
+      ;;
+    lint)
+      if rg -n 'lint: pass|Lint 清洁 ✅' "$file" >/dev/null 2>&1; then
+        printf 'pass\n'
+        return 0
+      fi
+      if rg -n 'lint: fail|Lint 清洁 ❌' "$file" >/dev/null 2>&1; then
+        printf 'fail\n'
+        return 0
+      fi
+      ;;
+    test)
+      if rg -n '测试通过|test: pass' "$file" >/dev/null 2>&1; then
+        printf 'pass\n'
+        return 0
+      fi
+      if rg -n 'test: fail' "$file" >/dev/null 2>&1; then
+        printf 'fail\n'
+        return 0
+      fi
+      ;;
+  esac
+
+  return 1
 }
 
 warn_status() {
@@ -107,10 +201,10 @@ if ! task_gate_ok "$change_dir/tasks.md"; then
   exit 1
 fi
 
-go_audit_status="$(extract_status "$change_dir/audit.md" "status")"
-build_status="$(extract_status "$change_dir/audit.md" "build")"
-lint_status="$(extract_status "$change_dir/audit.md" "lint")"
-test_status="$(extract_status "$change_dir/audit.md" "test")"
+go_audit_status="$(extract_audit_status "$change_dir/audit.md" "status" || true)"
+build_status="$(extract_audit_status "$change_dir/audit.md" "build" || true)"
+lint_status="$(extract_audit_status "$change_dir/audit.md" "lint" || true)"
+test_status="$(extract_audit_status "$change_dir/audit.md" "test" || true)"
 
 if [[ "$go_audit_status" != "pass" ]]; then
   echo "Go audit must be pass, got: ${go_audit_status:-missing}" >&2
@@ -132,15 +226,15 @@ if ! rg -n '^\|.*\|.*\|.*\|.*\|.*\|$' "$change_dir/test-review.md" >/dev/null 2>
   exit 1
 fi
 
-if ! rg -n '^## (Review Summary|Conclusion)$' "$change_dir/test-review.md" >/dev/null 2>&1; then
+if ! rg -n '^## (Review Summary|Conclusion|测试功能结论|Must Fix \(Critical\)|Optional Improvements)$' "$change_dir/test-review.md" >/dev/null 2>&1; then
   echo "Test review must include summary and conclusion sections: $change_dir/test-review.md" >&2
   exit 1
 fi
 
-summary_build="$(extract_status "$change_dir/commit-summary.md" "build")"
-summary_lint="$(extract_status "$change_dir/commit-summary.md" "lint")"
-summary_test="$(extract_status "$change_dir/commit-summary.md" "test")"
-summary_audit="$(extract_status "$change_dir/commit-summary.md" "audit")"
+summary_build="$(extract_commit_validation_status "$change_dir/commit-summary.md" "build" || extract_status "$change_dir/commit-summary.md" "build" || true)"
+summary_lint="$(extract_commit_validation_status "$change_dir/commit-summary.md" "lint" || extract_status "$change_dir/commit-summary.md" "lint" || true)"
+summary_test="$(extract_commit_validation_status "$change_dir/commit-summary.md" "test" || extract_status "$change_dir/commit-summary.md" "test" || true)"
+summary_audit="$(extract_commit_validation_status "$change_dir/commit-summary.md" "audit" || extract_status "$change_dir/commit-summary.md" "audit" || true)"
 
 for item in "build:$summary_build" "lint:$summary_lint" "test:$summary_test" "audit:$summary_audit"; do
   name="${item%%:*}"
