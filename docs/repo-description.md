@@ -6,7 +6,7 @@ Gate-driven engineering for AI-assisted software development.
 
 ## Long Description
 
-Speclawd is a repository-native engineering framework that turns AI-assisted development into a structured workflow with change artifacts, long-term specs, verification gates, delivery summaries, and archive steps.
+specClawd is a repository-native engineering framework that turns AI-assisted development into a structured workflow with change artifacts, long-term specs, verification gates, delivery summaries, and archive steps.
 
 ## GitHub Topics
 
@@ -21,17 +21,17 @@ Speclawd is a repository-native engineering framework that turns AI-assisted dev
 
 ## Social Preview Copy
 
-Speclawd helps teams bring discipline to AI-assisted coding with change artifacts, specs, verification gates, and multi-tool adapters.
+specClawd helps teams bring discipline to AI-assisted coding with change artifacts, specs, verification gates, and multi-tool adapters.
 
 ## Positioning Notes
 
-Avoid describing Speclawd as:
+Avoid describing specClawd as:
 
 - only a prompt pack
 - only a docs template set
 - only a Cursor workflow
 
-Prefer describing Speclawd as:
+Prefer describing specClawd as:
 
 - an engineering framework
 - a gate-driven workflow system

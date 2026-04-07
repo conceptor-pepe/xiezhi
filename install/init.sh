@@ -5,13 +5,13 @@ set -euo pipefail
 usage() {
   cat <<'EOF'
 Usage:
-  speclawd/install/init.sh --target <repo-dir> [--profile backend-brownfield] [--tool all]
+  specClawd/install/init.sh --target <repo-dir> [--profile backend-brownfield] [--tool all]
 
 Example:
-  speclawd/install/init.sh --target /path/to/repo
-  speclawd/install/init.sh --target /path/to/repo --profile minimal
-  speclawd/install/init.sh --target /path/to/repo --profile go-service --tool cursor
-  speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield --tool cursor,claude
+  specClawd/install/init.sh --target /path/to/repo
+  specClawd/install/init.sh --target /path/to/repo --profile minimal
+  specClawd/install/init.sh --target /path/to/repo --profile go-service --tool cursor
+  specClawd/install/init.sh --target /path/to/repo --profile backend-brownfield --tool cursor,claude
 EOF
 }
 
@@ -132,7 +132,7 @@ done < "$manifest"
 mkdir -p "$target_dir/docs/changes/archive"
 
 cat <<EOF
-Initialized Speclawd profile:
+Initialized specClawd profile:
   profile: $profile
   tools: $tool_mode
   target: $target_dir
@@ -141,12 +141,12 @@ Installed:
   - docs/templates/*
   - docs/specs/README.md
   - docs/changes/README.md
-  - .cursor/rules/speclawd-spec.mdc
-  - .cursor/commands/speclawd-*.md
-  - .github/prompts/speclawd-*.prompt.md
-  - .claude/prompts/speclawd-*.md
-  - .krio/prompts/speclawd-*.md
-  - scripts/speclawd-*.sh
+  - .cursor/rules/specClawd-spec.mdc
+  - .cursor/commands/specClawd-*.md
+  - .github/prompts/specClawd-*.prompt.md
+  - .claude/prompts/specClawd-*.md
+  - .krio/prompts/specClawd-*.md
+  - scripts/specClawd-*.sh
   - scripts/specld-*.sh
 
 Next:

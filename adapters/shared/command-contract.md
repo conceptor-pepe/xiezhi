@@ -33,7 +33,7 @@ Adapters must preserve these cross-artifact IDs and may not rename or replace th
 
 ## Workflow Commands
 
-### `speclawd:run`
+### `specClawd:run`
 
 Single-entry workflow driver for stateful execution.
 
@@ -47,7 +47,7 @@ Alias:
 
 - `specld:run`
 
-### `speclawd:start`
+### `specClawd:start`
 
 High-level workflow entry for a new user request.
 
@@ -63,7 +63,7 @@ Alias:
 
 - `specld:start`
 
-### `speclawd:continue`
+### `specClawd:continue`
 
 Continue the active workflow from `workflow-state.json`.
 
@@ -78,7 +78,7 @@ Alias:
 
 - `specld:next`
 
-### `speclawd:approve`
+### `specClawd:approve`
 
 Record user approval for the current waiting stage and move to the next workflow stage.
 
@@ -92,13 +92,13 @@ Alias:
 
 - `specld:approve`
 
-### `speclawd:new-change`
+### `specClawd:new-change`
 
 Create a new change directory and scaffold required artifacts.
 
 Must ensure all required artifacts exist before implementation starts.
 
-### `speclawd:spec-brief`
+### `specClawd:spec-brief`
 
 Prepare `spec-delta.md`, `design.md`, and `tasks.md` before implementation.
 
@@ -110,7 +110,7 @@ Must preserve:
 - `tasks.md` smallest shippable task breakdown
 - traceability IDs across `REQ-*`, `DES-*`, `RISK-*`, `TASK-*`, and `CASE-*`
 
-### `speclawd:verify`
+### `specClawd:verify`
 
 Check audit, review, test review, and related docs before delivery.
 
@@ -125,7 +125,7 @@ Must verify:
 - task quality and risk coverage consistency
 - `error-memory.md` existence and `MEM-*` usage
 
-### `speclawd:commit-summary`
+### `specClawd:commit-summary`
 
 Generate the delivery-layer summary for the change.
 
@@ -136,7 +136,7 @@ Must include:
 - validation result line
 - test review summary aligned with the actual test-review outcome
 
-### `speclawd:archive`
+### `specClawd:archive`
 
 Update long-term specs and complete archive records.
 

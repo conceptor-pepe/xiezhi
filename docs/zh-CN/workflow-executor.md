@@ -1,6 +1,6 @@
 # 工作流执行器接口
 
-这份文档解释 `workflow-actions.json` 和 `speclawd-executor.sh` 的作用。
+这份文档解释 `workflow-actions.json` 和 `specClawd-executor.sh` 的作用。
 
 ## 真源文件
 
@@ -8,10 +8,10 @@
 
 ## 执行器脚本
 
-- `scripts/speclawd-executor.sh`
+- `scripts/specClawd-executor.sh`
 - `scripts/specld-exec.sh`
-- `scripts/speclawd-driver.sh`
-- `scripts/speclawd-run.sh`
+- `scripts/specClawd-driver.sh`
+- `scripts/specClawd-run.sh`
 - `scripts/specld-run.sh`
 
 ## 作用
@@ -29,7 +29,7 @@
 ## 使用方式
 
 ```bash
-scripts/speclawd-executor.sh <change-dir>
+scripts/specClawd-executor.sh <change-dir>
 ```
 
 或：
@@ -45,7 +45,7 @@ scripts/specld-exec.sh <change-dir>
 - `workflow-state.json`：记录当前在哪个阶段
 - `workflow-stage-plan.json`：定义阶段结构
 - `workflow-actions.json`：定义当前阶段该执行哪些动作
-- `speclawd-executor.sh`：把当前状态和动作模板拼装成可执行上下文
+- `specClawd-executor.sh`：把当前状态和动作模板拼装成可执行上下文
 
 ## 当前边界
 
@@ -65,17 +65,17 @@ scripts/specld-exec.sh <change-dir>
 示例：
 
 ```bash
-scripts/speclawd-run.sh start order-refund-audit --date 2026-04-05
-scripts/speclawd-run.sh approve docs/changes/2026-04-05-order-refund-audit
-scripts/speclawd-run.sh next docs/changes/2026-04-05-order-refund-audit
+scripts/specClawd-run.sh start order-refund-audit --date 2026-04-05
+scripts/specClawd-run.sh approve docs/changes/2026-04-05-order-refund-audit
+scripts/specClawd-run.sh next docs/changes/2026-04-05-order-refund-audit
 ```
 
 等价地，也可以直接用 driver：
 
 ```bash
-scripts/speclawd-driver.sh start order-refund-audit --date 2026-04-05
-scripts/speclawd-driver.sh approve docs/changes/2026-04-05-order-refund-audit
-scripts/speclawd-driver.sh next docs/changes/2026-04-05-order-refund-audit
+scripts/specClawd-driver.sh start order-refund-audit --date 2026-04-05
+scripts/specClawd-driver.sh approve docs/changes/2026-04-05-order-refund-audit
+scripts/specClawd-driver.sh next docs/changes/2026-04-05-order-refund-audit
 ```
 
 当前执行器还没有直接做：

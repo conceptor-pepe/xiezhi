@@ -1,3 +1,3 @@
-# Speclawd Continue Alias
+# specClawd Continue Alias
 
-Alias of `speclawd:continue`.
+Alias of `specClawd:continue`.

@@ -1,8 +1,8 @@
-# Speclawd 0.1.0-alpha.1
+# specClawd 0.1.0-alpha.1
 
-Speclawd `0.1.0-alpha.1` is the first public alpha release.
+specClawd `0.1.0-alpha.1` is the first public alpha release.
 
-Speclawd is a gate-driven engineering framework for AI-assisted software development. This alpha is not about completeness. It is about shipping a coherent, installable, reviewable prototype that demonstrates the product direction.
+specClawd is a gate-driven engineering framework for AI-assisted software development. This alpha is not about completeness. It is about shipping a coherent, installable, reviewable prototype that demonstrates the product direction.
 
 ## Highlights
 

@@ -11,9 +11,9 @@
 
 ## Policy Sources
 
-- audit policy: `docs/speclawd/policies/audit-policy.md`
-- coding standards policy: `docs/speclawd/policies/coding-standards.md`
-- test review policy: `docs/speclawd/policies/test-review-policy.md`
+- audit policy: `docs/specClawd/policies/audit-policy.md`
+- coding standards policy: `docs/specClawd/policies/coding-standards.md`
+- test review policy: `docs/specClawd/policies/test-review-policy.md`
 - repo-specific overrides used in this change: `<none / path / note>`
 
 ## Validation Summary
@@ -33,7 +33,7 @@
 
 - primary audit tool / script: `python3 ~/.cursor/skills/go-audit/scripts/audit.py <modified-go-files>`
 - baseline source: `~/.cursor/rules/go-audit.mdc` + `~/.cursor/skills/go-audit/SKILL.md`
-- project policy source: `docs/speclawd/policies/audit-policy.md`
+- project policy source: `docs/specClawd/policies/audit-policy.md`
 - scope rationale: `<why these files / why this directory / why this replay>`
 - result: `<pass/fail/not-run>`
 - summary: `<e.g. 编码规范审计 ✅ (11/11) / failed on rule 6 and rule 11>`

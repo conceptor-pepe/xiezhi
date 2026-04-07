@@ -1,5 +1,5 @@
 # specld:start
 
-Alias of `speclawd:start`.
+Alias of `specClawd:start`.
 
-Start the stateful Speclawd workflow for the current user request.
+Start the stateful specClawd workflow for the current user request.

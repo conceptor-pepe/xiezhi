@@ -1,6 +1,6 @@
 # Post-Extraction TODO
 
-After Speclawd is moved into its own repository, these are the first recommended follow-up tasks.
+After specClawd is moved into its own repository, these are the first recommended follow-up tasks.
 
 ## Repository Setup
 

@@ -3,7 +3,7 @@
 set -euo pipefail
 
 cat <<'EOF'
-Speclawd bootstrap prototype
+specClawd bootstrap prototype
 
 Suggested setup steps:
 1. copy templates into your repository

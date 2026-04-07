@@ -1,6 +1,6 @@
 # 工作流执行规则
 
-这份文档描述 `Speclawd` 的高层工作流如何推进，以及每个阶段必须沉淀哪些 artifact。
+这份文档描述 `specClawd` 的高层工作流如何推进，以及每个阶段必须沉淀哪些 artifact。
 
 目标不是让用户记脚本名，而是让工具代理流程。
 
@@ -8,10 +8,10 @@
 
 优先使用高层命令：
 
-- `speclawd:run`
-- `speclawd:start`
-- `speclawd:continue`
-- `speclawd:approve`
+- `specClawd:run`
+- `specClawd:start`
+- `specClawd:continue`
+- `specClawd:approve`
 
 简写：
 
@@ -22,7 +22,7 @@
 
 其中：
 
-- `speclawd:run / specld:run` 是推荐的单入口 driver
+- `specClawd:run / specld:run` 是推荐的单入口 driver
 - `start / continue / approve` 适合工具或高级用户按阶段精确控制
 
 ## 状态文件
@@ -158,7 +158,7 @@
 执行：
 
 ```bash
-scripts/speclawd-verify.sh <change-dir>
+scripts/specClawd-verify.sh <change-dir>
 ```
 
 通过后：
@@ -195,7 +195,7 @@ scripts/speclawd-verify.sh <change-dir>
 执行：
 
 ```bash
-scripts/speclawd-archive.sh <change-dir>
+scripts/specClawd-archive.sh <change-dir>
 ```
 
 通过后：

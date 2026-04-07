@@ -1,15 +1,15 @@
 # Cursor 使用规范
 
-这份文档用于约束团队在 Cursor 中如何稳定触发 Speclawd 工作流。
+这份文档用于约束团队在 Cursor 中如何稳定触发 specClawd 工作流。
 
 目标不是“希望 Cursor 记得走流程”，而是让团队在不同任务类型下都用统一入口触发：
 
-- `speclawd:run`
+- `specClawd:run`
 - `specld:run`
 
 ## 总原则
 
-所有改动都进入同一条 Speclawd 工作流，但按风险分层：
+所有改动都进入同一条 specClawd 工作流，但按风险分层：
 
 - 新特性：完整流程
 - 复杂修改 / 疑难问题：完整流程
@@ -26,17 +26,17 @@
 
 业务仓库至少应已安装：
 
-- `.cursor/rules/speclawd-spec.mdc`
-- `.cursor/commands/speclawd-run.md`
+- `.cursor/rules/specClawd-spec.mdc`
+- `.cursor/commands/specClawd-run.md`
 - `.cursor/commands/specld-run.md`
-- `.cursor/commands/speclawd-start.md`
-- `.cursor/commands/speclawd-continue.md`
-- `.cursor/commands/speclawd-approve.md`
+- `.cursor/commands/specClawd-start.md`
+- `.cursor/commands/specClawd-continue.md`
+- `.cursor/commands/specClawd-approve.md`
 
 推荐通过以下方式安装：
 
 ```bash
-speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield --tool cursor
+specClawd/install/init.sh --target /path/to/repo --profile backend-brownfield --tool cursor
 ```
 
 ## 场景 1：新增特性
@@ -58,7 +58,7 @@ speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield --t
 ### 推荐提示词
 
 ```text
-这是一个新特性，请严格按 specld:run 进入 Speclawd 工作流。
+这是一个新特性，请严格按 specld:run 进入 specClawd 工作流。
 先创建 change，并生成 change.md、spec-delta.md、design.md、tasks.md。
 在我确认方案前不要开始编码。
 ```
@@ -90,7 +90,7 @@ speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield --t
 ### 推荐提示词
 
 ```text
-这是一个复杂修改，请按 specld:run 进入 Speclawd 工作流。
+这是一个复杂修改，请按 specld:run 进入 specClawd 工作流。
 如果已有 active change 就继续，没有就创建。
 先完成 spec-delta、design、tasks 和风险分析，确认后再改代码。
 ```
@@ -113,7 +113,7 @@ speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield --t
 
 ### 规则
 
-- 仍然进入 Speclawd 工作流
+- 仍然进入 specClawd 工作流
 - 允许轻量模式
 - 可以只拆 1 个 `TASK-*`
 - `design.md` 可以简化，但不能跳过
@@ -122,7 +122,7 @@ speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield --t
 ### 推荐提示词
 
 ```text
-这是一个简单修改，也请按 specld:run 进入 Speclawd 工作流。
+这是一个简单修改，也请按 specld:run 进入 specClawd 工作流。
 允许走轻量模式：保持最小 change、最小 design、单个 TASK-*，但不要跳过 review、test-review 和 verify。
 ```
 
@@ -162,5 +162,5 @@ speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield --t
 对 Cursor 的统一入口只有一个：
 
 ```text
-按 specld:run 进入 Speclawd 工作流。
+按 specld:run 进入 specClawd 工作流。
 ```

@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to Speclawd.
+Thanks for contributing to specClawd.
 
 ## Scope
 
@@ -40,7 +40,7 @@ PRs should explain:
 
 ## Change Discipline
 
-Speclawd is itself a workflow product. Contributions should keep these qualities:
+specClawd is itself a workflow product. Contributions should keep these qualities:
 
 - explicit structure
 - clear gates

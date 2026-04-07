@@ -2,9 +2,9 @@
 
 ## Policy Sources
 
-- coding standards policy: `docs/speclawd/policies/coding-standards.md`
-- audit policy: `docs/speclawd/policies/audit-policy.md`
-- test review policy: `docs/speclawd/policies/test-review-policy.md`
+- coding standards policy: `docs/specClawd/policies/coding-standards.md`
+- audit policy: `docs/specClawd/policies/audit-policy.md`
+- test review policy: `docs/specClawd/policies/test-review-policy.md`
 - repo-specific review focus used in this change: `<none / path / note>`
 
 ## Findings

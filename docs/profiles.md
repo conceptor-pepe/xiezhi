@@ -1,12 +1,12 @@
 # Profiles
 
-Speclawd profiles package different installation footprints for different adoption levels.
+specClawd profiles package different installation footprints for different adoption levels.
 
 ## `minimal`
 
 Best for:
 
-- teams trying Speclawd for the first time
+- teams trying specClawd for the first time
 - repositories that want scripts and artifact structure before tool adapters
 
 Includes:

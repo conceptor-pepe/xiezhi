@@ -2,9 +2,9 @@
 
 ## Release Goal
 
-Ship the first public Speclawd alpha as a working repository prototype.
+Ship the first public specClawd alpha as a working repository prototype.
 
-This release is not about completeness. It is about proving that Speclawd is already a coherent product:
+This release is not about completeness. It is about proving that specClawd is already a coherent product:
 
 - installable
 - profile-driven
@@ -14,7 +14,7 @@ This release is not about completeness. It is about proving that Speclawd is alr
 
 ## What This Alpha Includes
 
-- core Speclawd README and product positioning
+- core specClawd README and product positioning
 - semantic versioning via `VERSION`
 - three installable profiles:
   - `minimal`
@@ -43,7 +43,7 @@ This release is not about completeness. It is about proving that Speclawd is alr
 
 Suggested external framing:
 
-> Speclawd is a gate-driven engineering framework for AI-assisted software development. This alpha release introduces the first installable repository prototype, with profiles, workflow scripts, and multi-tool adapters.
+> specClawd is a gate-driven engineering framework for AI-assisted software development. This alpha release introduces the first installable repository prototype, with profiles, workflow scripts, and multi-tool adapters.
 
 For a copy-ready release body, see:
 
@@ -52,9 +52,9 @@ For a copy-ready release body, see:
 
 ## Validation Before Release
 
-- run `speclawd/scripts/check.sh`
-- run `speclawd/scripts/release-preflight.sh`
-- verify `speclawd/scripts/extract-standalone.sh` produces a valid standalone root
+- run `specClawd/scripts/check.sh`
+- run `specClawd/scripts/release-preflight.sh`
+- verify `specClawd/scripts/extract-standalone.sh` produces a valid standalone root
 - verify install flows for `minimal`, `go-service`, and `backend-brownfield`
 - review README, profiles, and quick start for public readability
 

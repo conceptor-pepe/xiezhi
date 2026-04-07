@@ -3,4 +3,4 @@
 set -euo pipefail
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-"$script_dir/speclawd-start.sh" "$@"
+"$script_dir/specClawd-start.sh" "$@"

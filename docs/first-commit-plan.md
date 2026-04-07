@@ -1,10 +1,10 @@
 # First Commit Plan
 
-Use this plan when creating the standalone `speclawd` repository.
+Use this plan when creating the standalone `specClawd` repository.
 
 ## Commit 1
 
-`chore(repo): import speclawd standalone prototype`
+`chore(repo): import specClawd standalone prototype`
 
 Include:
 

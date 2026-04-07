@@ -1,12 +1,12 @@
 # backend-brownfield
 
-This profile is the default Speclawd profile for brownfield backend repositories.
+This profile is the default specClawd profile for brownfield backend repositories.
 
 It installs:
 
 - change/spec documentation structure
 - standard change templates
-- core Speclawd workflow rule
+- core specClawd workflow rule
 - repository-local Cursor adapters
 - repository-local GitHub Copilot adapters
 - repository-local Claude prompt adapters

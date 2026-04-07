@@ -1,11 +1,11 @@
 # Extraction Checklist
 
-Use this checklist when moving Speclawd into its own repository.
+Use this checklist when moving specClawd into its own repository.
 
 ## Before Extraction
 
-- confirm `speclawd/scripts/check.sh` passes
-- confirm `speclawd/scripts/release-preflight.sh` passes
+- confirm `specClawd/scripts/check.sh` passes
+- confirm `specClawd/scripts/release-preflight.sh` passes
 - confirm README and release docs are ready for public readers
 
 ## Extraction
@@ -14,7 +14,7 @@ Use this checklist when moving Speclawd into its own repository.
 2. run:
 
 ```bash
-speclawd/scripts/extract-standalone.sh --target /path/to/new/speclawd
+specClawd/scripts/extract-standalone.sh --target /path/to/new/specClawd
 ```
 
 3. initialize git in the target directory

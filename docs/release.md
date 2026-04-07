@@ -2,7 +2,7 @@
 
 ## Versioning
 
-Speclawd should use semantic versioning:
+specClawd should use semantic versioning:
 
 - major: breaking workflow or install changes
 - minor: new profiles, adapters, commands, or compatible install features
@@ -15,7 +15,7 @@ Speclawd should use semantic versioning:
 3. verify install flows for supported profiles
 4. verify adapter files are complete
 5. verify scripts pass shell syntax checks
-6. run `speclawd/scripts/release-preflight.sh`
+6. run `specClawd/scripts/release-preflight.sh`
 7. tag the release
 
 Recommended supporting documents:

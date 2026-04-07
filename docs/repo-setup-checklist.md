@@ -1,6 +1,6 @@
 # Repository Setup Checklist
 
-Use this after creating the standalone `speclawd` repository on GitHub.
+Use this after creating the standalone `specClawd` repository on GitHub.
 
 ## README
 

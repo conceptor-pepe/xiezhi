@@ -4,8 +4,8 @@
 
 ## Policy Sources
 
-- test review policy: `docs/speclawd/policies/test-review-policy.md`
-- coding standards policy: `docs/speclawd/policies/coding-standards.md`
+- test review policy: `docs/specClawd/policies/test-review-policy.md`
+- coding standards policy: `docs/specClawd/policies/coding-standards.md`
 - repo-specific test focus used in this change: `<none / path / note>`
 
 ## 判定规则

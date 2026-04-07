@@ -1,6 +1,6 @@
 # Adapters 说明
 
-Speclawd 的适配器分两类：
+specClawd 的适配器分两类：
 
 - repository-local：适配器文件落在业务仓库内，由工具直接读取
 - global-install：适配器文件安装到用户目录，由工具全局读取
@@ -36,10 +36,10 @@ Speclawd 的适配器分两类：
 
 为了避免用户记脚本名，推荐优先使用高层命令：
 
-- `speclawd:run`
-- `speclawd:start`
-- `speclawd:continue`
-- `speclawd:approve`
+- `specClawd:run`
+- `specClawd:start`
+- `specClawd:continue`
+- `specClawd:approve`
 
 简写别名：
 
@@ -50,7 +50,7 @@ Speclawd 的适配器分两类：
 
 其中：
 
-- `speclawd:run / specld:run` 是推荐的单入口 driver
+- `specClawd:run / specld:run` 是推荐的单入口 driver
 - `start / continue / approve` 是 driver 内部阶段控制命令，也可以由高级用户直接使用
 
 这些命令的目标是：
@@ -67,18 +67,18 @@ Speclawd 的适配器分两类：
 
 底层命令仍然保留，但更偏向工作流内部能力：
 
-- `speclawd:new-change`
-- `speclawd:spec-brief`
-- `speclawd:verify`
-- `speclawd:commit-summary`
-- `speclawd:archive`
+- `specClawd:new-change`
+- `specClawd:spec-brief`
+- `specClawd:verify`
+- `specClawd:commit-summary`
+- `specClawd:archive`
 
 如果你希望在命令行里直接推进工作流，也可以使用对应脚本：
 
-- `scripts/speclawd-run.sh`
-- `scripts/speclawd-start.sh`
-- `scripts/speclawd-continue.sh`
-- `scripts/speclawd-approve.sh`
+- `scripts/specClawd-run.sh`
+- `scripts/specClawd-start.sh`
+- `scripts/specClawd-continue.sh`
+- `scripts/specClawd-approve.sh`
 - 简写：
   - `scripts/specld-run.sh`
   - `scripts/specld-start.sh`
@@ -91,26 +91,26 @@ Speclawd 的适配器分两类：
 
 安装位置：
 
-- `.cursor/rules/speclawd-spec.mdc`
-- `.cursor/commands/speclawd-*.md`
+- `.cursor/rules/specClawd-spec.mdc`
+- `.cursor/commands/specClawd-*.md`
 
 ### GitHub Copilot
 
 安装位置：
 
-- `.github/prompts/speclawd-*.prompt.md`
+- `.github/prompts/specClawd-*.prompt.md`
 
 ### Claude
 
 安装位置：
 
-- `.claude/prompts/speclawd-*.md`
+- `.claude/prompts/specClawd-*.md`
 
 ### Krio
 
 安装位置：
 
-- `.krio/prompts/speclawd-*.md`
+- `.krio/prompts/specClawd-*.md`
 
 这些 repository-local adapter 的特点是：
 
@@ -127,7 +127,7 @@ Codex 当前仍是全局安装模式。
 安装方式：
 
 ```bash
-speclawd/adapters/codex/install.sh
+specClawd/adapters/codex/install.sh
 ```
 
 默认安装位置：
@@ -138,8 +138,8 @@ speclawd/adapters/codex/install.sh
 ## 安装示例
 
 ```bash
-speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield
-speclawd/install/init.sh --target /path/to/repo --profile go-service --tool cursor
-speclawd/install/init.sh --target /path/to/repo --profile go-service --tool claude,krio
-speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield --tool cursor,copilot,claude,krio
+specClawd/install/init.sh --target /path/to/repo --profile backend-brownfield
+specClawd/install/init.sh --target /path/to/repo --profile go-service --tool cursor
+specClawd/install/init.sh --target /path/to/repo --profile go-service --tool claude,krio
+specClawd/install/init.sh --target /path/to/repo --profile backend-brownfield --tool cursor,copilot,claude,krio
 ```

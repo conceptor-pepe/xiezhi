@@ -14,8 +14,8 @@
 - reduce overlap between `go-service` and `backend-brownfield`
 - make adapter boundaries clearer: repository-local vs global-install
 - expand the example repository into a more realistic end-to-end demo
-- keep strengthening `speclawd-verify.sh` beyond structural traceability checks
-- make `speclawd-archive.sh` closer to a real archive workflow
+- keep strengthening `specClawd-verify.sh` beyond structural traceability checks
+- make `specClawd-archive.sh` closer to a real archive workflow
 - clarify how teams should maintain long-term specs after repeated changes
 - validate the workflow in at least one real adopter repository
 

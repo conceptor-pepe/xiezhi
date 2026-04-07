@@ -1,6 +1,6 @@
 # Example: Go Backend
 
-This example shows the repository shape after initializing Speclawd in a Go backend project.
+This example shows the repository shape after initializing specClawd in a Go backend project.
 
 ## Expected Layout
 
@@ -11,10 +11,10 @@ go-backend/
 │   ├── specs/
 │   └── templates/
 ├── scripts/
-│   ├── speclawd-new-change.sh
-│   ├── speclawd-verify.sh
-│   ├── speclawd-archive.sh
-│   └── speclawd-check-pr.sh
+│   ├── specClawd-new-change.sh
+│   ├── specClawd-verify.sh
+│   ├── specClawd-archive.sh
+│   └── specClawd-check-pr.sh
 ├── .cursor/
 │   ├── rules/
 │   └── commands/

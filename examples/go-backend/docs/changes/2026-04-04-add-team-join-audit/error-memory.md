@@ -11,7 +11,7 @@
 - root cause: earlier templates only required broad sections, not stable cross-artifact references
 - affected artifacts: `spec-delta.md`, `design.md`, `tasks.md`, `review.md`, `test-review.md`, `commit-summary.md`
 - prevention rule: every change must define and reuse stable traceability IDs for requirements, design, tasks, findings, tests, and memory lessons
-- gate update: templates and `speclawd-verify.sh` now require cross-artifact traceability IDs
+- gate update: templates and `specClawd-verify.sh` now require cross-artifact traceability IDs
 - status: applied
 
 ## Reused Lessons
@@ -20,5 +20,5 @@
 
 ## Follow-Up Actions
 
-- owner: speclawd maintainers
+- owner: specClawd maintainers
 - next action: keep example files aligned with templates so regression checks remain trustworthy

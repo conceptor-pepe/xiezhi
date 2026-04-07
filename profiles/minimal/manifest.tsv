@@ -3,8 +3,8 @@ templates/backend-brownfield/spec-delta.md	docs/templates/spec-delta.md
 templates/backend-brownfield/tasks.md	docs/templates/tasks.md
 templates/backend-brownfield/specs-README.md	docs/specs/README.md
 templates/backend-brownfield/changes-README.md	docs/changes/README.md
-rules/core/speclawd-spec.mdc	.cursor/rules/speclawd-spec.mdc
-scripts/speclawd-new-change.sh	scripts/speclawd-new-change.sh
-scripts/speclawd-verify.sh	scripts/speclawd-verify.sh
-scripts/speclawd-archive.sh	scripts/speclawd-archive.sh
-scripts/speclawd-check-pr.sh	scripts/speclawd-check-pr.sh
+rules/core/specClawd-spec.mdc	.cursor/rules/specClawd-spec.mdc
+scripts/specClawd-new-change.sh	scripts/specClawd-new-change.sh
+scripts/specClawd-verify.sh	scripts/specClawd-verify.sh
+scripts/specClawd-archive.sh	scripts/specClawd-archive.sh
+scripts/specClawd-check-pr.sh	scripts/specClawd-check-pr.sh

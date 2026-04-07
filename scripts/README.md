@@ -1,22 +1,22 @@
 # Scripts
 
-These scripts are the execution layer of Speclawd.
+These scripts are the execution layer of specClawd.
 
 They should remain reusable across repositories and CI environments.
 
 ## Core Scripts
 
-- `speclawd-new-change.sh`
-- `speclawd-start.sh`
-- `speclawd-continue.sh`
-- `speclawd-approve.sh`
-- `speclawd-executor.sh`
-- `speclawd-driver.sh`
-- `speclawd-run.sh`
-- `speclawd-verify.sh`
-- `speclawd-archive.sh`
-- `speclawd-check-pr.sh`
-- `speclawd-workflow-lib.sh`
+- `specClawd-new-change.sh`
+- `specClawd-start.sh`
+- `specClawd-continue.sh`
+- `specClawd-approve.sh`
+- `specClawd-executor.sh`
+- `specClawd-driver.sh`
+- `specClawd-run.sh`
+- `specClawd-verify.sh`
+- `specClawd-archive.sh`
+- `specClawd-check-pr.sh`
+- `specClawd-workflow-lib.sh`
 - `specld-start.sh`
 - `specld-next.sh`
 - `specld-approve.sh`
@@ -30,4 +30,4 @@ They should remain reusable across repositories and CI environments.
 
 Scripts enforce workflow mechanics. They should avoid embedding product-specific business logic.
 
-`speclawd-run.sh` is the preferred single-entry wrapper for stateful workflow driving.
+`specClawd-run.sh` is the preferred single-entry wrapper for stateful workflow driving.

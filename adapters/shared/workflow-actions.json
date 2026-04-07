@@ -55,7 +55,7 @@
         "workflow-state.json"
       ],
       "agent_actions": [
-        "run scripts/speclawd-verify.sh on the active change",
+        "run scripts/specClawd-verify.sh on the active change",
         "stop on failure and report blocking issues",
         "if verify passes, move to commit-summary confirmation"
       ],
@@ -85,7 +85,7 @@
       "agent_actions": [
         "sync long-term specs from spec-delta.md",
         "complete archive.md traceability summary",
-        "run scripts/speclawd-archive.sh on the active change",
+        "run scripts/specClawd-archive.sh on the active change",
         "if archive checks pass, mark workflow completed"
       ],
       "completion_gate": "archive_passed",

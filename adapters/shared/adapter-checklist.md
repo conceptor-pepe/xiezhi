@@ -10,11 +10,11 @@ Keep workflow meaning identical across tools while allowing different transport 
 
 The adapter should expose the same command set:
 
-- `speclawd:new-change`
-- `speclawd:spec-brief`
-- `speclawd:verify`
-- `speclawd:commit-summary`
-- `speclawd:archive`
+- `specClawd:new-change`
+- `specClawd:spec-brief`
+- `specClawd:verify`
+- `specClawd:commit-summary`
+- `specClawd:archive`
 
 ## Must Preserve
 
