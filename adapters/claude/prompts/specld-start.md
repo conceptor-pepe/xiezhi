@@ -1,3 +1,3 @@
-# SpecLedger Start Alias
+# Speclawd Start Alias
 
-Alias of `specledger:start`.
+Alias of `speclawd:start`.

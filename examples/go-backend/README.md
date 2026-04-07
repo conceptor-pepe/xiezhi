@@ -1,6 +1,6 @@
 # Example: Go Backend
 
-This example shows the repository shape after initializing SpecLedger in a Go backend project.
+This example shows the repository shape after initializing Speclawd in a Go backend project.
 
 ## Expected Layout
 
@@ -11,10 +11,10 @@ go-backend/
 │   ├── specs/
 │   └── templates/
 ├── scripts/
-│   ├── specledger-new-change.sh
-│   ├── specledger-verify.sh
-│   ├── specledger-archive.sh
-│   └── specledger-check-pr.sh
+│   ├── speclawd-new-change.sh
+│   ├── speclawd-verify.sh
+│   ├── speclawd-archive.sh
+│   └── speclawd-check-pr.sh
 ├── .cursor/
 │   ├── rules/
 │   └── commands/

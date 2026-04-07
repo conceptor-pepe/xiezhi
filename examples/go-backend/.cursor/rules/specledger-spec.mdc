@@ -1,9 +1,0 @@
----
-name: SpecLedger Spec Workflow
-description: Example installed workflow rule for the Go backend example
-alwaysApply: true
----
-
-# SpecLedger Spec Workflow
-
-This file demonstrates how the installed repository-local workflow rule looks inside a target repository.

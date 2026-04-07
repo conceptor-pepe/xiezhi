@@ -38,8 +38,8 @@ done
 
 echo "Checking example verify and archive flows..."
 example_change="$root_dir/examples/go-backend/docs/changes/2026-04-04-add-team-join-audit"
-"$root_dir/scripts/specledger-verify.sh" "$example_change" >/dev/null
-"$root_dir/scripts/specledger-archive.sh" "$example_change" >/dev/null
+"$root_dir/scripts/speclawd-verify.sh" "$example_change" >/dev/null
+"$root_dir/scripts/speclawd-archive.sh" "$example_change" >/dev/null
 
 echo "Checking required root files..."
 for file in README.md VERSION CHANGELOG.md LICENSE; do
@@ -49,4 +49,4 @@ for file in README.md VERSION CHANGELOG.md LICENSE; do
   fi
 done
 
-echo "SpecLedger checks passed."
+echo "Speclawd checks passed."

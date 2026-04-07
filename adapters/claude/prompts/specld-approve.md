@@ -1,3 +1,3 @@
-# SpecLedger Approve Alias
+# Speclawd Approve Alias
 
-Alias of `specledger:approve`.
+Alias of `speclawd:approve`.

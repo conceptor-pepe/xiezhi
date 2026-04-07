@@ -1,12 +1,12 @@
 # Profiles 说明
 
-SpecLedger 通过不同 profile 提供不同的安装覆盖范围。
+Speclawd 通过不同 profile 提供不同的安装覆盖范围。
 
 ## `minimal`
 
 适合：
 
-- 第一次试用 SpecLedger 的团队
+- 第一次试用 Speclawd 的团队
 - 只想先引入脚本和 artifact 结构，不想马上接工具适配器的仓库
 
 包含：

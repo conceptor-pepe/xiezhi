@@ -1,6 +1,6 @@
 # minimal
 
-This is the lightest SpecLedger profile.
+This is the lightest Speclawd profile.
 
 It installs:
 
@@ -11,4 +11,4 @@ It installs:
 
 It does not install repository-local AI tool adapters by default.
 
-Use this profile when a team wants to try SpecLedger with the lowest adoption cost first.
+Use this profile when a team wants to try Speclawd with the lowest adoption cost first.

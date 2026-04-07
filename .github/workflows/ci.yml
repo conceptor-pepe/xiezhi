@@ -1,4 +1,4 @@
-name: SpecLedger CI
+name: Speclawd CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   validate:
-    name: Validate SpecLedger
+    name: Validate Speclawd
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,9 +17,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          chmod +x scripts/check.sh scripts/release-preflight.sh scripts/specledger-verify.sh scripts/specledger-archive.sh scripts/specledger-new-change.sh install/init.sh
+          chmod +x scripts/check.sh scripts/release-preflight.sh scripts/speclawd-verify.sh scripts/speclawd-archive.sh scripts/speclawd-new-change.sh install/init.sh
 
-      - name: Run SpecLedger checks
+      - name: Run Speclawd checks
         shell: bash
         run: |
           set -euo pipefail

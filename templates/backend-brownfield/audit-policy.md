@@ -1,7 +1,7 @@
 # Audit Policy
 
 > Repository-level policy for validation, audit tools, and release gating.
-> Keep this file project-specific. SpecLedger verifies that change artifacts reference it, but does not force a single universal checklist.
+> Keep this file project-specific. Speclawd verifies that change artifacts reference it, but does not force a single universal checklist.
 
 ## Purpose
 

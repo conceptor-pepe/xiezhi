@@ -5,10 +5,10 @@ set -euo pipefail
 usage() {
   cat <<'EOF'
 Usage:
-  specledger/scripts/extract-standalone.sh --target <new-repo-dir>
+  speclawd/scripts/extract-standalone.sh --target <new-repo-dir>
 
 Example:
-  specledger/scripts/extract-standalone.sh --target /tmp/specledger
+  speclawd/scripts/extract-standalone.sh --target /tmp/speclawd
 EOF
 }
 
@@ -80,10 +80,10 @@ done
 chmod +x \
   "$target_dir/scripts/check.sh" \
   "$target_dir/scripts/release-preflight.sh" \
-  "$target_dir/scripts/specledger-new-change.sh" \
-  "$target_dir/scripts/specledger-verify.sh" \
-  "$target_dir/scripts/specledger-archive.sh" \
-  "$target_dir/scripts/specledger-check-pr.sh" \
+  "$target_dir/scripts/speclawd-new-change.sh" \
+  "$target_dir/scripts/speclawd-verify.sh" \
+  "$target_dir/scripts/speclawd-archive.sh" \
+  "$target_dir/scripts/speclawd-check-pr.sh" \
   "$target_dir/install/init.sh" \
   "$target_dir/install/bootstrap.sh" \
   "$target_dir/adapters/codex/install.sh"
@@ -94,7 +94,7 @@ chmod +x \
 )
 
 cat <<EOF
-Extracted standalone SpecLedger repository to:
+Extracted standalone Speclawd repository to:
   $target_dir
 
 Next:

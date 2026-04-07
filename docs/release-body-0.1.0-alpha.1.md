@@ -1,8 +1,8 @@
-# SpecLedger 0.1.0-alpha.1
+# Speclawd 0.1.0-alpha.1
 
-SpecLedger `0.1.0-alpha.1` is the first public alpha release.
+Speclawd `0.1.0-alpha.1` is the first public alpha release.
 
-SpecLedger is a gate-driven engineering framework for AI-assisted software development. This alpha is not about completeness. It is about shipping a coherent, installable, reviewable prototype that demonstrates the product direction.
+Speclawd is a gate-driven engineering framework for AI-assisted software development. This alpha is not about completeness. It is about shipping a coherent, installable, reviewable prototype that demonstrates the product direction.
 
 ## Highlights
 

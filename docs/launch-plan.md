@@ -2,12 +2,12 @@
 
 ## Objective
 
-Move SpecLedger from an internal prototype inside the backend repository to a standalone public alpha repository.
+Move Speclawd from an internal prototype inside the backend repository to a standalone public alpha repository.
 
 ## Phase 1: Repository Extraction
 
-- create a separate `specledger` repository
-- run `specledger/scripts/extract-standalone.sh --target <new-repo-dir>`
+- create a separate `speclawd` repository
+- run `speclawd/scripts/extract-standalone.sh --target <new-repo-dir>`
 - verify relative paths in scripts and docs
 - run repository checks in the new root
 - verify GitHub Actions runs `./scripts/check.sh` successfully in the standalone repository

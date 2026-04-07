@@ -55,8 +55,8 @@
 
 - `workflow-stage-plan.json`：描述阶段计划
 - `workflow-state.json`：记录当前状态
-- `specledger-start/continue/approve.sh`：推进状态
-- `specledger-verify.sh` / `specledger-archive.sh`：做硬门禁
+- `speclawd-start/continue/approve.sh`：推进状态
+- `speclawd-verify.sh` / `speclawd-archive.sh`：做硬门禁
 
 也就是说：
 

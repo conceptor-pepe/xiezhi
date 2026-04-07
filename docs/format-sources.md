@@ -1,6 +1,6 @@
 # Format Sources
 
-SpecLedger should not invent artifact formats ad hoc. The repository templates should follow the format sources below.
+Speclawd should not invent artifact formats ad hoc. The repository templates should follow the format sources below.
 
 ## Source Of Truth By Artifact
 

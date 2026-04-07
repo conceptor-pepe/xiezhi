@@ -1,11 +1,11 @@
 # Extraction Checklist
 
-Use this checklist when moving SpecLedger into its own repository.
+Use this checklist when moving Speclawd into its own repository.
 
 ## Before Extraction
 
-- confirm `specledger/scripts/check.sh` passes
-- confirm `specledger/scripts/release-preflight.sh` passes
+- confirm `speclawd/scripts/check.sh` passes
+- confirm `speclawd/scripts/release-preflight.sh` passes
 - confirm README and release docs are ready for public readers
 
 ## Extraction
@@ -14,7 +14,7 @@ Use this checklist when moving SpecLedger into its own repository.
 2. run:
 
 ```bash
-specledger/scripts/extract-standalone.sh --target /path/to/new/specledger
+speclawd/scripts/extract-standalone.sh --target /path/to/new/speclawd
 ```
 
 3. initialize git in the target directory

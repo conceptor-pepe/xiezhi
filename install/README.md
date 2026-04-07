@@ -5,11 +5,11 @@
 Initialize a repository with a profile:
 
 ```bash
-specledger/install/init.sh --target /path/to/repo --profile backend-brownfield
-specledger/install/init.sh --target /path/to/repo --profile go-service --tool cursor
-specledger/install/init.sh --target /path/to/repo --profile go-service --tool claude
-specledger/install/init.sh --target /path/to/repo --profile backend-brownfield --tool cursor,claude,krio
-specledger/install/init.sh --target /path/to/repo --profile minimal --tool none
+speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield
+speclawd/install/init.sh --target /path/to/repo --profile go-service --tool cursor
+speclawd/install/init.sh --target /path/to/repo --profile go-service --tool claude
+speclawd/install/init.sh --target /path/to/repo --profile backend-brownfield --tool cursor,claude,krio
+speclawd/install/init.sh --target /path/to/repo --profile minimal --tool none
 ```
 
 Default profile:
@@ -43,7 +43,7 @@ Example:
 Use:
 
 ```bash
-specledger/adapters/codex/install.sh
+speclawd/adapters/codex/install.sh
 ```
 
 ## Installed Repository Assets
@@ -53,16 +53,16 @@ The init script installs:
 - `docs/templates/*`
 - `docs/specs/README.md`
 - `docs/changes/README.md`
-- `.cursor/rules/specledger-spec.mdc`
-- `.cursor/commands/specledger-*.md`
-- `.github/prompts/specledger-*.prompt.md`
-- `.claude/prompts/specledger-*.md`
-- `.krio/prompts/specledger-*.md`
-- `scripts/specledger-*.sh`
+- `.cursor/rules/speclawd-spec.mdc`
+- `.cursor/commands/speclawd-*.md`
+- `.github/prompts/speclawd-*.prompt.md`
+- `.claude/prompts/speclawd-*.md`
+- `.krio/prompts/speclawd-*.md`
+- `scripts/speclawd-*.sh`
 - `scripts/specld-*.sh`
 
-See profile differences in `specledger/docs/profiles.md`.
+See profile differences in `speclawd/docs/profiles.md`.
 
 Adapter usage details:
 
-- `specledger/docs/adapters.md`
+- `speclawd/docs/adapters.md`

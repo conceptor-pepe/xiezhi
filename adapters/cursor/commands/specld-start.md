@@ -1,5 +1,5 @@
 # specld:start
 
-Alias of `specledger:start`.
+Alias of `speclawd:start`.
 
-Start the stateful SpecLedger workflow for the current user request.
+Start the stateful Speclawd workflow for the current user request.

@@ -1,3 +1,3 @@
 # Specld Run
 
-Shorthand alias of `specledger:run`.
+Shorthand alias of `speclawd:run`.

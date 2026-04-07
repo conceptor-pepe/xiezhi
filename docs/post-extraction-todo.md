@@ -1,6 +1,6 @@
 # Post-Extraction TODO
 
-After SpecLedger is moved into its own repository, these are the first recommended follow-up tasks.
+After Speclawd is moved into its own repository, these are the first recommended follow-up tasks.
 
 ## Repository Setup
 

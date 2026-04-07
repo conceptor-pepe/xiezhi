@@ -1,12 +1,12 @@
 # Profiles
 
-SpecLedger profiles package different installation footprints for different adoption levels.
+Speclawd profiles package different installation footprints for different adoption levels.
 
 ## `minimal`
 
 Best for:
 
-- teams trying SpecLedger for the first time
+- teams trying Speclawd for the first time
 - repositories that want scripts and artifact structure before tool adapters
 
 Includes:

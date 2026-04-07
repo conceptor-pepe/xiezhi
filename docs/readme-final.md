@@ -1,10 +1,10 @@
-# SpecLedger
+# Speclawd
 
 Gate-driven engineering for AI-assisted software development.
 
-SpecLedger is a repository-native engineering framework that helps teams bring discipline to AI-assisted development. It combines change artifacts, system specs, verification gates, review structure, delivery summaries, and archive steps into one operating model.
+Speclawd is a repository-native engineering framework that helps teams bring discipline to AI-assisted development. It combines change artifacts, system specs, verification gates, review structure, delivery summaries, and archive steps into one operating model.
 
-## Why SpecLedger
+## Why Speclawd
 
 AI coding tools are fast, but speed without gates creates drift:
 
@@ -14,7 +14,7 @@ AI coding tools are fast, but speed without gates creates drift:
 - delivery summaries vary by author and tool
 - long-term system truth falls behind shipped behavior
 
-SpecLedger fixes this with a gate-driven repository workflow:
+Speclawd fixes this with a gate-driven repository workflow:
 
 - `changes/` for the current change
 - `specs/` for long-term truth
@@ -79,7 +79,7 @@ Examples:
 
 ## Who It Is For
 
-SpecLedger is built for:
+Speclawd is built for:
 
 - brownfield systems
 - engineering teams using AI coding tools
@@ -96,4 +96,4 @@ SpecLedger is built for:
 
 ## Status
 
-SpecLedger `0.1.0-alpha.1` is the first public alpha repository prototype. It is intended to prove the installation model, workflow structure, and adapter direction before broader stabilization.
+Speclawd `0.1.0-alpha.1` is the first public alpha repository prototype. It is intended to prove the installation model, workflow structure, and adapter direction before broader stabilization.

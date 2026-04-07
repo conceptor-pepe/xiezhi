@@ -1,6 +1,6 @@
 # Workflow Protocol
 
-This file defines the stateful agent workflow that sits above the low-level `SpecLedger` scripts.
+This file defines the stateful agent workflow that sits above the low-level `Speclawd` scripts.
 
 ## Goal
 
@@ -80,19 +80,19 @@ The workflow should explicitly stop for user confirmation at least at these poin
 
 ## High-Level Commands
 
-- `specledger:start` / `specld:start`
-- `specledger:continue` / `specld:next`
-- `specledger:approve` / `specld:approve`
+- `speclawd:start` / `specld:start`
+- `speclawd:continue` / `specld:next`
+- `speclawd:approve` / `specld:approve`
 
 ## Low-Level Commands
 
 These remain valid as lower-level building blocks:
 
-- `specledger:new-change`
-- `specledger:spec-brief`
-- `specledger:verify`
-- `specledger:commit-summary`
-- `specledger:archive`
+- `speclawd:new-change`
+- `speclawd:spec-brief`
+- `speclawd:verify`
+- `speclawd:commit-summary`
+- `speclawd:archive`
 
 ## Adapter Rule
 

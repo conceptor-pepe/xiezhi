@@ -1,12 +1,12 @@
-# SpecLedger
+# Speclawd
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 面向 AI 辅助研发的门禁式工程框架。
 
-SpecLedger 是一个仓库内原生的工程协作框架，用来给 AI 辅助开发加上“可追溯、可校验、可归档”的约束。它把变更文档、系统规格、验证门禁、评审结构、交付总结和归档流程放到同一套工作模型里。
+Speclawd 是一个仓库内原生的工程协作框架，用来给 AI 辅助开发加上“可追溯、可校验、可归档”的约束。它把变更文档、系统规格、验证门禁、评审结构、交付总结和归档流程放到同一套工作模型里。
 
-## 为什么需要 SpecLedger
+## 为什么需要 Speclawd
 
 AI 编码工具很快，但如果没有门禁，漂移会很严重：
 
@@ -16,7 +16,7 @@ AI 编码工具很快，但如果没有门禁，漂移会很严重：
 - 交付总结因人而异
 - 长期规格和线上行为逐渐脱节
 
-SpecLedger 的目标，就是把这些问题收回到仓库内，用固定 artifact 和脚本门禁来约束。
+Speclawd 的目标，就是把这些问题收回到仓库内，用固定 artifact 和脚本门禁来约束。
 
 ## 核心流程
 
@@ -56,7 +56,7 @@ SpecLedger 的目标，就是把这些问题收回到仓库内，用固定 artif
 - Krio：仓库内 prompt adapter
 - Codex：全局安装 prompt adapter
 
-无论工具不同，SpecLedger 都要求同一套流程语义，不允许每个工具各搞一套 artifact。
+无论工具不同，Speclawd 都要求同一套流程语义，不允许每个工具各搞一套 artifact。
 
 ## 快速开始
 
@@ -77,10 +77,10 @@ SpecLedger 的目标，就是把这些问题收回到仓库内，用固定 artif
 
 推荐优先使用高层工作流命令：
 
-- `specledger:run`
-- `specledger:start`
-- `specledger:continue`
-- `specledger:approve`
+- `speclawd:run`
+- `speclawd:start`
+- `speclawd:continue`
+- `speclawd:approve`
 
 也支持简写：
 
@@ -92,20 +92,20 @@ SpecLedger 的目标，就是把这些问题收回到仓库内，用固定 artif
 如果你希望工具代理整条流程，优先使用单入口 driver：
 
 ```bash
-/path/to/repo/scripts/specledger-run.sh start add-team-credit-flow
+/path/to/repo/scripts/speclawd-run.sh start add-team-credit-flow
 ```
 
 之后通常只需要：
 
 ```bash
-/path/to/repo/scripts/specledger-run.sh approve /path/to/repo/docs/changes/<date>-add-team-credit-flow
-/path/to/repo/scripts/specledger-run.sh next /path/to/repo/docs/changes/<date>-add-team-credit-flow
+/path/to/repo/scripts/speclawd-run.sh approve /path/to/repo/docs/changes/<date>-add-team-credit-flow
+/path/to/repo/scripts/speclawd-run.sh next /path/to/repo/docs/changes/<date>-add-team-credit-flow
 ```
 
 如果你只是单独创建一个新变更，也可以直接用：
 
 ```bash
-/path/to/repo/scripts/specledger-new-change.sh add-team-credit-flow
+/path/to/repo/scripts/speclawd-new-change.sh add-team-credit-flow
 ```
 
 在实现前，先准备：
@@ -117,13 +117,13 @@ SpecLedger 的目标，就是把这些问题收回到仓库内，用固定 artif
 交付前运行：
 
 ```bash
-/path/to/repo/scripts/specledger-verify.sh /path/to/repo/docs/changes/<date>-add-team-credit-flow
+/path/to/repo/scripts/speclawd-verify.sh /path/to/repo/docs/changes/<date>-add-team-credit-flow
 ```
 
 归档前运行：
 
 ```bash
-/path/to/repo/scripts/specledger-archive.sh /path/to/repo/docs/changes/<date>-add-team-credit-flow
+/path/to/repo/scripts/speclawd-archive.sh /path/to/repo/docs/changes/<date>-add-team-credit-flow
 ```
 
 ## 适合谁
@@ -150,5 +150,5 @@ SpecLedger 的目标，就是把这些问题收回到仓库内，用固定 artif
 
 ## 当前状态
 
-SpecLedger `0.1.0-alpha.1` 是第一版公开 alpha 仓库原型。  
+Speclawd `0.1.0-alpha.1` 是第一版公开 alpha 仓库原型。  
 它的目标不是“功能全部做完”，而是先证明这套安装方式、流程结构、门禁脚本和多工具适配方向是成立的。

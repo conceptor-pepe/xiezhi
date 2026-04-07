@@ -1,5 +1,5 @@
 # specld:next
 
-Alias of `specledger:continue`.
+Alias of `speclawd:continue`.
 
-Continue the active SpecLedger workflow from `workflow-state.json`.
+Continue the active Speclawd workflow from `workflow-state.json`.

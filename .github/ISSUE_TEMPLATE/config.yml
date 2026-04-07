@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: SpecLedger Discussions
-    url: https://github.com/conceptor-pepe/specledger/discussions
+  - name: Speclawd Discussions
+    url: https://github.com/conceptor-pepe/speclawd/discussions
     about: Use discussions for open-ended questions and product direction conversations when enabled.

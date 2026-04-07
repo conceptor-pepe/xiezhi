@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to SpecLedger.
+Thanks for contributing to Speclawd.
 
 ## Scope
 
@@ -40,7 +40,7 @@ PRs should explain:
 
 ## Change Discipline
 
-SpecLedger is itself a workflow product. Contributions should keep these qualities:
+Speclawd is itself a workflow product. Contributions should keep these qualities:
 
 - explicit structure
 - clear gates

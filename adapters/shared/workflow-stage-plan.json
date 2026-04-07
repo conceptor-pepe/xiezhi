@@ -80,7 +80,7 @@
         "workflow-state.json"
       ],
       "completion_checks": [
-        "scripts/specledger-verify.sh passes"
+        "scripts/speclawd-verify.sh passes"
       ],
       "confirmation_required": true,
       "confirmation_key": "commit-summary",
@@ -107,7 +107,7 @@
         "specs"
       ],
       "completion_checks": [
-        "scripts/specledger-archive.sh passes",
+        "scripts/speclawd-archive.sh passes",
         "workflow status moves to completed"
       ],
       "confirmation_required": false,
